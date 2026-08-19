@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISVET | Clínica Veterinaria de Vanguardia</title>
+    <meta name="description" content="Clínica veterinaria en Sant Vicenç de castellet. Medicina de calidad, tecnología avanzada y trato cercano. Especialistas en cirugía, medicina interna y oftalmología veterinaria.">
+    <meta name="keywords" content="veterinaria, clinica veterinaria, oftalmologia veterinaria, cirugia veterinaria, manresa, visvet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="VISVET | Clínica Veterinaria de Vanguardia">
+    <meta property="og:description" content="Cuidamos de tu animal con la cercanía de una clínica de pueblo y los medios de un centro veterinario moderno.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://visvet.es">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        visvet: {
+                            900: '#082032',
+                            800: '#0F4C81',
+                            700: '#1B6CA8',
+                            400: '#4FD1C5',
+                            100: '#F5F7FA',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .glass-dark {
+            background: rgba(8, 32, 50, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(8, 32, 50, 0.9) 0%, rgba(15, 76, 129, 0.8) 100%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F7FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1B6CA8;
+            border-radius: 4px;
+        }
+    </style>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "VISVET",
+      "image": "https://visvet.es/assets/hero.jpg",
+      "@id": "https://visvet.es",
+      "url": "https://visvet.es",
+      "telephone": "+34930000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Mayor, 123",
+        "addressLocality": "Manresa",
+        "postalCode": "08240",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.728,
+        "longitude": 1.826
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
+</head>
+<body class="bg-visvet-100 text-visvet-900 font-sans antialiased selection:bg-visvet-400 selection:text-visvet-900 overflow-x-hidden">
+
+    <!-- Header / Sticky Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-transparent">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-visvet-800 flex items-center justify-center text-white font-extrabold text-xl shadow-lg transition-transform group-hover:scale-105">
+                    V
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-white transition-colors group-hover:text-visvet-400">VISVET</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/90">
+                <a href="#historia" class="hover:text-visvet-400 transition-colors">Nuestra Historia</a>
+                <a href="#quienes-somos" class="hover:text-visvet-400 transition-colors">Equipo</a>
+                <a href="#servicios" class="hover:text-visvet-400 transition-colors">Servicios</a>
+                <a href="#oftalmologia" class="hover:text-visvet-400 transition-colors">Oftalmología</a>
+                <a href="#instalaciones" class="hover:text-visvet-400 transition-colors">Instalaciones</a>
+                <a href="#filosofia" class="hover:text-visvet-400 transition-colors">Filosofía</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contacto" class="px-5 py-2.5 rounded-full bg-visvet-400 text-visvet-900 font-semibold text-sm hover:bg-white transition-all shadow-lg hover:shadow-visvet-400/20">
+                    Pedir Cita
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-visvet-900/98 z-50 flex flex-col items-center justify-center gap-6 text-xl font-semibold text-white translate-x-full transition-transform duration-300 md:hidden">
+            <button id="close-btn" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+            <a href="#historia" class="mobile-link hover:text-visvet-400">Nuestra Historia</a>
+            <a href="#quienes-somos" class="mobile-link hover:text-visvet-400">Equipo</a>
+            <a href="#servicios" class="mobile-link hover:text-visvet-400">Servicios</a>
+            <a href="#oftalmologia" class="mobile-link hover:text-visvet-400">Oftalmología</a>
+            <a href="#instalaciones" class="mobile-link hover:text-visvet-400">Instalaciones</a>
+            <a href="#filosofia" class="mobile-link hover:text-visvet-400">Filosofía</a>
+            <a href="#contacto" class="mobile-link px-8 py-3 rounded-full bg-visvet-400 text-visvet-900 text-base">Pedir Cita</a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center bg-visvet-900 overflow-hidden pt-20">
+        <!-- Background Image with Parallax & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2000&auto=format&fit=crop" alt="Veterinaria moderna" class="w-full h-full object-cover opacity-40 scale-105 animate-pulse duration-[10000ms]">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 text-left space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-visvet-400 text-xs font-semibold tracking-wide uppercase backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-visvet-400 animate-ping"></span>
+                    Medicina Veterinaria de Vanguardia
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
+                    Veterinaria cercana, <span class="text-transparent bg-clip-text bg-gradient-to-r from-visvet-400 to-blue-200">medicina de calidad</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 max-w-2xl font-light">
+                    Cuidamos de tu animal con la cercanía de una clínica de pueblo y los medios de un centro veterinario moderno.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contacto" class="px-8 py-4 rounded-full bg-visvet-400 text-visvet-900 font-bold hover:bg-white transition-all shadow-xl hover:-translate-y-0.5">
+                        Pedir cita
+                    </a>
+                    <a href="#historia" class="px-8 py-4 rounded-full glass-dark text-white font-semibold hover:bg-white/10 transition-all border border-white/20">
+                        Conócenos
+                    </a>
+                </div>
+
+                <!-- Animated Stats -->
+                <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10 mt-10">
+                    <div>
+                        <div class="text-3xl font-extrabold text-white">+15</div>
+                        <div class="text-xs text-white/60 font-medium">Años de Experiencia</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-visvet-400">100%</div>
+                        <div class="text-xs text-white/60 font-medium">Dedicación y Pasión</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-white">24/7</div>
+                        <div class="text-xs text-white/60 font-medium">Compromiso Médico</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Premium Card in Hero -->
+            <div class="lg:col-span-5 hidden lg:block">
+                <div class="glass-dark p-8 rounded-3xl shadow-2xl relative border border-white/10 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-visvet-800 flex items-center justify-center text-visvet-400 text-2xl font-bold">
+                            ✦
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Tecnología Avanzada</h3>
+                            <p class="text-white/60 text-sm">Diagnóstico preciso y seguro</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="w-4/5 h-full bg-visvet-400 rounded-full"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-white/60">
+                            <span>Oftalmología & Quirófano</span>
+                            <span class="text-visvet-400 font-semibold">Nivel Clínico Superior</span>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm italic">
+                        "Un concepto diferente donde la excelencia médica se une al respeto absoluto por el animal."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/60">
+            <span class="text-xs uppercase tracking-widest font-semibold">Scroll</span>
+            <div class="w-5 h-9 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
+                <div class="w-1 h-2 bg-visvet-400 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. NUESTRA HISTORIA -->
+    <section id="historia" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Orígenes y Vocación</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">Nuestra Historia</h2>
+                <p class="text-visvet-800/70 max-w-2xl mx-auto">
+                    Una forma diferente de entender la veterinaria en Sant Vicenç de castellet.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-visvet-700/20 ml-4 md:ml-32 space-y-12">
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-visvet-800 border-4 border-white shadow-md"></div>
+                    <div class="glass-panel p-8 rounded-3xl shadow-sm border border-visvet-100 space-y-3">
+                        <span class="text-xs font-bold text-visvet-700 uppercase tracking-wider">El Génesis</span>
+                        <h3 class="text-xl font-bold text-visvet-900">Una visión compartida</h3>
+                        <p class="text-visvet-800/80 leading-relaxed">
+                            La clínica nace de la iniciativa de dos profesionales que decidieron crear una forma diferente de ejercer la veterinaria, combinando cercanía, formación continua y tecnología moderna.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-visvet-400 border-4 border-white shadow-md"></div>
+                    <div class="glass-panel p-8 rounded-3xl shadow-sm border border-visvet-100 space-y-3">
+                        <span class="text-xs font-bold text-visvet-700 uppercase tracking-wider">Evolución Constante</span>
+                        <h3 class="text-xl font-bold text-visvet-900">Tecnología y Especialización</h3>
+                        <p class="text-visvet-800/80 leading-relaxed">
+                            Incorporamos equipamiento de vanguardia en diagnóstico por imagen, laboratorio propio y áreas especializadas como la oftalmología veterinaria, sin perder nunca el trato humano y personalizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. QUIÉNES SOMOS / EQUIPO -->
+    <section id="quienes-somos" class="py-24 px-6 md:px-12 bg-visvet-100 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Profesionales Apasionados</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">Quiénes Somos</h2>
+                <p class="text-visvet-800/70 max-w-2xl mx-auto">
+                    Experiencia, rigor clínico y dedicación absoluta al cuidado animal.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Roser Obach -->
+                <div class="glass-panel p-8 md:p-10 rounded-3xl shadow-xl border border-white/60 space-y-6 hover:shadow-2xl transition-all">
+                    <div class="flex items-center gap-5">
+                        <div class="w-20 h-20 rounded-2xl bg-visvet-800 text-white flex items-center justify-center font-bold text-2xl shadow-md">
+                            RO
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-visvet-900">Roser Obach Farré</h3>
+                            <p class="text-visvet-700 font-semibold text-sm">Veterinaria y Fundadora</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-visvet-800/80 text-sm">
+                        <li class="flex items-center gap-2">✦ Formación universitaria</li>
+                        <li class="flex items-center gap-2">✦ Máster en Cirugía Veterinaria</li>
+                        <li class="flex items-center gap-2">✦ Máster en Oftalmología Veterinaria</li>
+                        <li class="flex items-center gap-2">✦ Internado en IVO Barcelona</li>
+                        <li class="flex items-center gap-2">✦ Máster en Medicina Interna</li>
+                    </ul>
+                </div>
+
+                <!-- Albert Bohigas -->
+                <div class="glass-panel p-8 md:p-10 rounded-3xl shadow-xl border border-white/60 space-y-6 hover:shadow-2xl transition-all">
+                    <div class="flex items-center gap-5">
+                        <div class="w-20 h-20 rounded-2xl bg-visvet-400 text-visvet-900 flex items-center justify-center font-bold text-2xl shadow-md">
+                            AB
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-visvet-900">Albert Bohigas Vilarmau</h3>
+                            <p class="text-visvet-700 font-semibold text-sm">Cofundador</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-visvet-800/80 text-sm">
+                        <li class="flex items-center gap-2">✦ ATV (Asistente Técnico Veterinario)</li>
+                        <li class="flex items-center gap-2">✦ Técnico de Quirófano</li>
+                        <li class="flex items-center gap-2">✦ Amplia experiencia clínica</li>
+                        <li class="flex items-center gap-2">✦ Gestión y asistencia veterinaria avanzada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICIOS -->
+    <section id="servicios" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Excelencia Médica</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">Nuestros Servicios</h2>
+                <p class="text-visvet-800/70 max-w-2xl mx-auto">
+                    Soluciones diagnósticas y terapéuticas completas para la salud de tu mascota.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                        🩺
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Consulta veterinaria</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Exploración clínica exhaustiva, diagnóstico precoz y planes de salud individualizados.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Medicina preventiva</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Programas de vacunación, desparasitación y control geriátrico adaptados a cada etapa vital.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                        🔬
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Laboratorio y analíticas</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Resultados rápidos y fiables en bioquímica, hematología y citologías en el propio centro.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                         rayos 
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Radiografía digital</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Imagen de alta definición para una valoración traumatológica, torácica y abdominal precisa.
+                    </p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                        📡
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Ecografía</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Diagnóstico por ultrasonidos no invasivo para la evaluación detallada de órganos internos.
+                    </p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="p-8 rounded-3xl bg-visvet-100/50 border border-visvet-100 hover:border-visvet-400 transition-all group hover:-translate-y-1 shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-visvet-800 text-white flex items-center justify-center mb-6 text-xl group-hover:bg-visvet-400 group-hover:text-visvet-900 transition-colors">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-visvet-900 mb-2">Cirugía</h3>
+                    <p class="text-visvet-800/70 text-sm leading-relaxed">
+                        Quirófano dotado de monitorización avanzada y estrictos protocolos de seguridad anestésica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OFTALMOLOGÍA VETERINARIA (SECCIÓN DESTACADA) -->
+    <section id="oftalmologia" class="py-24 px-6 md:px-12 bg-visvet-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4FD1C5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-visvet-400 font-bold text-sm tracking-widest uppercase">Especialidad Clínica</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Oftalmología Veterinaria</h2>
+                    <p class="text-white/80 leading-relaxed font-light text-lg">
+                        Unidad especializada liderada por Roser Obach. Diagnóstico y microcirugía ocular avanzada para preservar y devolver la visión a tus animales.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-bold text-visvet-400 mb-1">Lámpara de hendidura</h4>
+                            <p class="text-xs text-white/70">Exploración biomicroscópica de alta precisión.</p>
+                        </div>
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-bold text-visvet-400 mb-1">Tonometría</h4>
+                            <p class="text-xs text-white/70">Medición exacta de la presión intraocular.</p>
+                        </div>
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-bold text-visvet-400 mb-1">Microscopio quirúrgico</h4>
+                            <p class="text-xs text-white/70">Tecnología punta en intervenciones oculares.</p>
+                        </div>
+                        <div class="glass-dark p-4 rounded-2xl border border-white/10">
+                            <h4 class="font-bold text-visvet-400 mb-1">Electrorretinografía</h4>
+                            <p class="text-xs text-white/70">Evaluación funcional de la retina.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="glass-dark p-8 md:p-10 rounded-3xl border border-white/10 space-y-6 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white">Compromiso Visual</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Desde patologías de la superficie corneal hasta cirugías complejas de cristalino y cataratas. Nuestro objetivo es ofrecer la máxima excelencia diagnóstica en cada caso remitido o de primera línea.
+                        </p>
+                        <div class="p-4 rounded-2xl bg-visvet-800/50 border border-visvet-400/30 flex items-center gap-4">
+                            <div class="text-3xl">👁️</div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Tecnología de última generación</h4>
+                                <p class="text-xs text-visvet-400">Especialistas formados en centros de referencia internacional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INSTALACIONES -->
+    <section id="instalaciones" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Espacios Diseñados para el Bienestar</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">Nuestras Instalaciones</h2>
+                <p class="text-visvet-800/70 max-w-2xl mx-auto">
+                    Un entorno moderno, limpio y adaptado para garantizar la tranquilidad de pacientes y familias.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" alt="Consultas" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Consultas Médicas</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop" alt="Quirófano" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Quirófano</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" alt="Laboratorio" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Laboratorio Propio</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=800&auto=format&fit=crop" alt="Radiología" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Radiología Digital</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1583912267670-6675bb4cc74e?q=80&w=800&auto=format&fit=crop" alt="Ecografía" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Sala de Ecografía</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-3xl overflow-hidden shadow-md aspect-video bg-visvet-900 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Equipos oftalmológicos" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-visvet-900/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-bold text-lg">Área de Oftalmología</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FILOSOFÍA -->
+    <section id="filosofia" class="py-24 px-6 md:px-12 bg-visvet-100 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Nuestros Valores</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">"Hacer las cosas bien."</h2>
+            <p class="text-xl md:text-2xl text-visvet-800/80 font-light leading-relaxed italic">
+                "Creemos firmemente que la excelencia médica no está reñida con la calidez humana. Cada paciente es único y merece nuestra máxima dedicación, honestidad y respeto."
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 pt-6 text-sm font-semibold text-visvet-700">
+                <span class="px-6 py-2 rounded-full bg-white shadow-sm border border-visvet-200">Cercanía</span>
+                <span class="px-6 py-2 rounded-full bg-white shadow-sm border border-visvet-200">Calidad</span>
+                <span class="px-6 py-2 rounded-full bg-white shadow-sm border border-visvet-200">Confianza</span>
+                <span class="px-6 py-2 rounded-full bg-white shadow-sm border border-visvet-200">Formación continua</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CONTACTO -->
+    <section id="contacto" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-visvet-700 font-bold text-sm tracking-widest uppercase">Estamos aquí para ayudarte</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-visvet-900 tracking-tight">Contacto y Citas</h2>
+                <p class="text-visvet-800/70 max-w-2xl mx-auto">
+                    Pide cita previa o ponte en contacto con nuestro equipo clínico.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Formulario -->
+                <div class="lg:col-span-7 bg-visvet-100/50 p-8 md:p-12 rounded-3xl border border-visvet-100 shadow-sm">
+                    <form onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo en breve.');" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-visvet-900 uppercase mb-2">Nombre y Apellidos</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-white border border-visvet-200 focus:outline-none focus:border-visvet-800 transition-colors" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-visvet-900 uppercase mb-2">Teléfono</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-white border border-visvet-200 focus:outline-none focus:border-visvet-800 transition-colors" placeholder="Tu teléfono">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-visvet-900 uppercase mb-2">Correo electrónico</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-white border border-visvet-200 focus:outline-none focus:border-visvet-800 transition-colors" placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-visvet-900 uppercase mb-2">Motivo de la consulta / Mensaje</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-white border border-visvet-200 focus:outline-none focus:border-visvet-800 transition-colors" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-visvet-800 text-white font-bold hover:bg-visvet-700 transition-colors shadow-lg">
+                            Enviar Mensaje / Pedir Cita
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info & Map -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-visvet-900 text-white p-8 md:p-10 rounded-3xl space-y-6 shadow-xl">
+                        <h3 class="text-2xl font-bold">Información de Contacto</h3>
+                        <div class="space-y-4 text-sm text-white/80">
+                            <p class="flex items-start gap-3">
+                                <span class="text-visvet-400 font-bold">📍</span>
+                                <span>Calle Mayor, 123, 08240 Manresa, Barcelona</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="text-visvet-400 font-bold">📞</span>
+                                <span>+34 930 00 00 00</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="text-visvet-400 font-bold">💬</span>
+                                <span>+34 600 00 00 00 (WhatsApp)</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="text-visvet-400 font-bold">✉️</span>
+                                <span>info@visvet.es</span>
+                            </p>
+                            <p class="flex items-start gap-3 pt-2 border-t border-white/10">
+                                <span class="text-visvet-400 font-bold">⏰</span>
+                                <span>Lunes a Viernes: 09:00 - 20:00<br>Sábados: Urgencias concertadas</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER PREMIUM -->
+    <footer class="bg-visvet-900 text-white border-t border-white/10 py-12 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-visvet-800 flex items-center justify-center text-white font-extrabold text-sm">
+                    V
+                </div>
+                <span class="text-xl font-extrabold tracking-tight">VISVET</span>
+            </div>
+            <p class="text-sm text-white/60 text-center">
+                &copy; 2026 VISVET Clínica Veterinaria. Todos los derechos reservados.
+            </p>
+            <div class="flex gap-6 text-sm text-white/80">
+                <a href="#" class="hover:text-visvet-400 transition-colors">Privacidad</a>
+                <a href="#" class="hover:text-visvet-400 transition-colors">Aviso Legal</a>
+                <a href="#" class="hover:text-visvet-400 transition-colors">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Moderno -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Sticky Header Background on Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-visvet-900/90', 'backdrop-blur-md', 'shadow-lg', 'py-3');
+                header.classList.remove('py-4', 'bg-transparent');
+            } else {
+                header.classList.remove('bg-visvet-900/90', 'backdrop-blur-md', 'shadow-lg', 'py-3');
+                header.classList.add('py-4', 'bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
