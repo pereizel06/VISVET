@@ -124,6 +124,7 @@
             transition: var(--transition);
             cursor: pointer;
             border: 2px solid transparent;
+            gap: 8px;
         }
 
         .btn-primary {
@@ -167,7 +168,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
             transition: var(--transition);
@@ -470,6 +471,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .team-card {
@@ -486,7 +489,7 @@
         }
 
         .team-img-wrapper {
-            height: 280px;
+            height: 300px;
             overflow: hidden;
         }
 
@@ -574,7 +577,7 @@
         }
 
         /* =========================================
-           GALERÍA Y LIGHTBOX
+           GALERÍA Y LIGHTBOX (9 FOTOS ESPACIO)
            ========================================= */
         .gallery {
             padding: 100px 0;
@@ -583,17 +586,18 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
         .gallery-item {
             position: relative;
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            height: 260px;
+            height: 280px;
             cursor: pointer;
             box-shadow: var(--shadow-sm);
+            background-color: var(--bg-light);
         }
 
         .gallery-item img {
@@ -606,7 +610,7 @@
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background-color: rgba(10, 60, 103, 0.4);
+            background-color: rgba(10, 60, 103, 0.45);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -698,87 +702,104 @@
         }
 
         /* =========================================
-           CONTACTO
+           CONTACTO (SIN MAPA, SOLO INFO Y LLAMADA)
            ========================================= */
         .contact {
             padding: 100px 0;
             background-color: var(--bg-light);
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 48px;
-            align-items: stretch;
+        .contact-container-single {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-info-box {
             background-color: var(--white);
-            padding: 48px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
+            padding: 56px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 32px;
         }
 
         .contact-info-box h3 {
-            font-size: 1.75rem;
+            font-size: 2rem;
             color: var(--primary);
-            margin-bottom: 24px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .contact-info-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .contact-grid-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid-details {
+                grid-template-columns: 1fr;
+            }
         }
 
         .contact-detail {
             display: flex;
             gap: 16px;
-            margin-bottom: 24px;
+            align-items: flex-start;
         }
 
         .contact-detail svg {
             color: var(--accent);
             flex-shrink: 0;
             margin-top: 4px;
+            width: 28px;
+            height: 28px;
         }
 
         .contact-detail h4 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--primary);
             margin-bottom: 4px;
+            font-weight: 600;
         }
 
         .contact-detail p, .contact-detail a {
             color: var(--text-muted);
             font-size: 0.95rem;
             transition: var(--transition);
+            line-height: 1.5;
         }
 
         .contact-detail a:hover {
             color: var(--primary);
         }
 
-        .map-wrapper {
-            background-color: var(--white);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .map-placeholder {
+        .contact-action-box {
             text-align: center;
-            padding: 40px;
-            color: var(--text-muted);
+            background-color: var(--primary-light);
+            padding: 32px;
+            border-radius: var(--radius-md);
+            border: 1px dashed var(--accent);
         }
 
-        .map-placeholder svg {
+        .contact-action-box h4 {
             color: var(--primary);
-            margin-bottom: 16px;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-action-box p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
 
         /* =========================================
@@ -854,13 +875,17 @@
         }
 
         @media (max-width: 968px) {
-            .hero-grid, .about-grid, .oph-grid, .contact-grid, .footer-grid {
+            .hero-grid, .about-grid, .oph-grid, .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .nav-menu {
@@ -902,8 +927,11 @@
             .section-title {
                 font-size: 1.85rem;
             }
-            .services-grid, .team-grid {
+            .services-grid, .team-grid, .gallery-grid {
                 grid-template-columns: 1fr;
+            }
+            .contact-info-box {
+                padding: 24px;
             }
         }
     </style>
@@ -924,7 +952,10 @@
                     <li><a href="#equipo" class="nav-link">Equipo</a></li>
                     <li><a href="#galeria" class="nav-link">Galería</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li><a href="tel:659752096" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Pedir cita</a></li>
+                    <li><a href="tel:659752096" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        Llamar
+                    </a></li>
                 </ul>
             </nav>
 
@@ -945,12 +976,14 @@
                         <h1>Veterinaria cercana, medicina de calidad.</h1>
                         <p>Cuidamos de tu animal con la cercanía de una clínica de pueblo y los medios de un centro veterinario moderno.</p>
                         <div class="hero-buttons">
-                            <a href="tel:659752096" class="btn btn-primary">Pedir cita</a>
+                            <a href="tel:659752096" class="btn btn-primary">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                Llamar para Cita
+                            </a>
                             <a href="#clinica" class="btn btn-outline">Conócenos</a>
                         </div>
                     </div>
                     <div class="hero-image-wrapper animate-on-scroll">
-                        <!-- FOTO 1: imagen principal del hero -->
                         <img src="foto1.png" alt="Clínica veterinaria VISVET - Cuidado animal profesional">
                     </div>
                 </div>
@@ -962,7 +995,6 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image animate-on-scroll">
-                        <!-- FOTO 2: instalaciones o clínica general -->
                         <img src="foto2.png" alt="Instalaciones de la clínica VISVET">
                     </div>
                     <div class="about-text animate-on-scroll">
@@ -1018,7 +1050,7 @@
                             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><circle cx="12" cy="13" r="3"></circle></svg>
                         </div>
                         <h3>Radiografía digital</h3>
-                        <p>Contamos con equipamiento de radiografía digital avanzado para obtener imágenes de alta calidad que ayudan en el diagnóstico preciso de diferentes patologías.</p>
+                        <p>Contamos with equipamiento de radiografía digital avanzado para obtener imágenes de alta calidad que ayudan en el diagnóstico preciso de diferentes patologías.</p>
                     </div>
 
                     <!-- Servicio 5 -->
@@ -1067,7 +1099,6 @@
                         </ul>
                     </div>
                     <div class="oph-image animate-on-scroll">
-                        <!-- FOTO 3: consulta o área médica/oftalmología -->
                         <img src="foto3.png" alt="Servicio de oftalmología veterinaria VISVET">
                     </div>
                 </div>
@@ -1087,7 +1118,6 @@
                     <!-- Roser -->
                     <div class="team-card animate-on-scroll">
                         <div class="team-img-wrapper">
-                            <!-- FOTO 4: Roser Obach -->
                             <img src="foto4.png" alt="Roser Obach Farré - Veterinaria fundadora de VISVET">
                         </div>
                         <div class="team-info">
@@ -1100,13 +1130,12 @@
                     <!-- Albert -->
                     <div class="team-card animate-on-scroll">
                         <div class="team-img-wrapper">
-                            <!-- FOTO 5: Albert Bohigas -->
                             <img src="foto5.png" alt="Albert Bohigas Vilarmau - ATV y cofundador de VISVET">
                         </div>
                         <div class="team-info">
                             <h3>Albert Bohigas Vilarmau</h3>
                             <span class="team-role">ATV, Técnico de Quirófano y Cofundador</span>
-                        <p>Formado en CIM Formación. Con una sólida trayectoria en centros de referencia como el Hospital Veterinari Provença y la Clínica Veterinària Sant Fruitós. Encargado de quirófano, análisis y atención.</p>
+                            <p>Formado en CIM Formación. Con una sólida trayectoria en centros de referencia como el Hospital Veterinari Provença y la Clínica Veterinària Sant Fruitós. Encargado de quirófano, análisis y atención.</p>
                         </div>
                     </div>
                 </div>
@@ -1150,33 +1179,75 @@
             </div>
         </section>
 
-        <!-- GALERÍA -->
+        <!-- GALERÍA (9 FOTOS EXACTAS) -->
         <section class="gallery" id="galeria">
             <div class="container">
                 <div class="section-header animate-on-scroll">
                     <span class="section-subtitle">Instalaciones</span>
                     <h2 class="section-title">Galería Fotográfica</h2>
-                    <p class="section-desc">Un vistazo a nuestras instalaciones y equipamiento médico.</p>
+                    <p class="section-desc">Un vistazo a nuestras instalaciones, equipamiento médico y pacientes.</p>
                 </div>
 
                 <div class="gallery-grid">
-                    <!-- FOTO 2 -->
-                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto2.png')">
-                        <img src="foto2.png" alt="Instalaciones VISVET">
-                        <div class="gallery-overlay">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                        </div>
-                    </div>
-                    <!-- FOTO 3 -->
-                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto3.png')">
-                        <img src="foto3.png" alt="Equipamiento médico VISVET">
-                        <div class="gallery-overlay">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                        </div>
-                    </div>
-                    <!-- FOTO 1 -->
+                    <!-- Foto 1 (Ya existente) -->
                     <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto1.png')">
-                        <img src="foto1.png" alt="Centro veterinario VISVET">
+                        <img src="foto1.png" alt="Centro veterinario VISVET 1">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 2 (Ya existente) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto2.png')">
+                        <img src="foto2.png" alt="Instalaciones VISVET 2">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 3 (Ya existente) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto3.png')">
+                        <img src="foto3.png" alt="Equipamiento médico VISVET 3">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 4 (Nueva 1) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto4.png')">
+                        <img src="foto4.png" alt="Área clínica VISVET 4">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 5 (Nueva 2) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto5.png')">
+                        <img src="foto5.png" alt="Sala de espera VISVET 5">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 6 (Nueva 3) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto1.png')">
+                        <img src="foto1.png" alt="Atención personalizada VISVET 6">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 7 (Nueva 4) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto2.png')">
+                        <img src="foto2.png" alt="Quirófano VISVET 7">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 8 (Nueva 5) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto3.png')">
+                        <img src="foto3.png" alt="Laboratorio VISVET 8">
+                        <div class="gallery-overlay">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Foto 9 (Nueva 6) -->
+                    <div class="gallery-item animate-on-scroll" onclick="openLightbox('foto4.png')">
+                        <img src="foto4.png" alt="Pacientes VISVET 9">
                         <div class="gallery-overlay">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                         </div>
@@ -1189,67 +1260,71 @@
         <section class="cta-section">
             <div class="container cta-container animate-on-scroll">
                 <h2>¿Necesitas programar una visita para tu animal?</h2>
-                <p>Ponte en contacto con nosotros o visítanos directamente en la clínica. Estaremos encantados de atenderte.</p>
-                <a href="tel:659752096" class="btn btn-light" style="font-weight: 600;">Llamar ahora: 659 75 20 96</a>
+                <p>Ponte en contacto con nosotros directamente por teléfono. Estaremos encantados de atenderte.</p>
+                <a href="tel:659752096" class="btn btn-light" style="font-weight: 600;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    Llamar ahora: 659 75 20 96
+                </a>
             </div>
         </section>
 
-        <!-- CONTACTO -->
+        <!-- CONTACTO (SIN MAPA, CENTRADO EN LLAMADA) -->
         <section class="contact" id="contacto">
             <div class="container">
                 <div class="section-header animate-on-scroll">
                     <span class="section-subtitle">Estamos aquí</span>
                     <h2 class="section-title">Contacto y Ubicación</h2>
-                    <p class="section-desc">Ven a conocernos o ponte en contacto por teléfono o correo electrónico.</p>
+                    <p class="section-desc">Ponte en contacto con nosotros por teléfono para cualquier consulta o cita previa.</p>
                 </div>
 
-                <div class="contact-grid">
-                    <div class="contact-info-box animate-on-scroll">
+                <div class="contact-container-single animate-on-scroll">
+                    <div class="contact-info-box">
                         <div>
-                            <h3>Información</h3>
-                            
+                            <h3>Clínica Veterinaria VISVET</h3>
+                            <p class="contact-info-subtitle">Atención profesional y cercana en el Bages</p>
+                        </div>
+
+                        <div class="contact-grid-details">
                             <div class="contact-detail">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 <div>
                                     <h4>Dirección</h4>
-                                    <p>Av. Del secretari | Sant Vicenç de castellet | 08295</p>
+                                    <p>Av. Del secretari<br>Sant Vicenç de Castellet<br>08295</p>
                                 </div>
                             </div>
 
                             <div class="contact-detail">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 <div>
-                                    <h4>Teléfono / WhatsApp</h4>
-                                    <p><a href="tel:659752096">659 75 20 96</a></p>
+                                    <h4>Teléfono</h4>
+                                    <p><a href="tel:659752096"><strong>659 75 20 96</strong></a></p>
                                 </div>
                             </div>
 
                             <div class="contact-detail">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 <div>
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:ifovisvet@gmail.com">infovisvet@gmail.com</a></p>
+                                    <h4>Correo Electrónico</h4>
+                                    <p><a href="mailto:clinicaveterinariavisvet@gmail.com">clinicaveterinariavisvet@gmail.com</a></p>
                                 </div>
                             </div>
 
                             <div class="contact-detail">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <div>
-                                    <h4>Horarios</h4>
-                                    <p>DLL-Dv 10:00 - 19:00 | Dm-Dj 9:30 - 13:00 16:00 - 20:00 | Diss 10:00 - 14:00</p>
+                                    <h4>Horarios de Atención</h4>
+                                    <p><strong>DLL-Dv:</strong> 10:00 - 19:00<br><strong>Dm-Dj:</strong> 9:30 - 13:00 | 16:00 - 20:00<br><strong>Diss:</strong> 10:00 - 14:00</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div style="margin-top: 24px;">
-                            <a href="tel:659752096" class="btn btn-primary" style="width: 100%;">Pedir Cita Previa</a>
-                        </div>
-                    </div>
-
-                    <div class="map-wrapper animate-on-scroll">
-                        <div class="map-placeholder">
-                            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                            <p><strong>Ubicación: calle enginier llanso 40, SANT VICENÇ DE CASTELLET </strong><br>Mapa preparado para integrar Google Maps próximamente.</p>
+                        <div class="contact-action-box">
+                            <h4>¿Deseas pedir cita o resolver una urgencia?</h4>
+                            <p>El sistema de contacto directo es por llamada telefónica para una atención rápida y personalizada.</p>
+                            <a href="tel:659752096" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 36px;">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                Llamar Ahora: 659 75 20 96
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1273,14 +1348,15 @@
                         <a href="#servicios">Servicios</a>
                         <a href="#oftalmologia">Oftalmología</a>
                         <a href="#equipo">Equipo</a>
+                        <a href="#galeria">Galería</a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <div class="footer-links">
                         <a href="tel:659752096">659 75 20 96</a>
-                        <a href="mailto:ifovisvet@gmail.com">ifovisvet@gmail.com</a>
-                        <p style="font-size: 0.9rem; margin-top: 8px;">Av. Del secretari</p>
+                        <a href="mailto:clinicaveterinariavisvet@gmail.com">clinicaveterinariavisvet@gmail.com</a>
+                        <p style="font-size: 0.9rem; margin-top: 8px;">Av. Del secretari, Sant Vicenç de Castellet</p>
                     </div>
                 </div>
             </div>
