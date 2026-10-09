@@ -33,7 +33,7 @@ ul{list-style:none}a{text-decoration:none;color:inherit}img{max-width:100%;heigh
 .btn-outline:hover{background:var(--primary-light);transform:translateY(-2px)}
 .btn-light{background:var(--white);color:var(--primary)}.btn-light:hover{background:var(--primary-light)}
 /* NAVBAR */
-.navbar{position:fixed;top:41px;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);transition:var(--transition)}
+.navbar{position:fixed;top:4px;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);transition:var(--transition)}
 .navbar.scrolled{box-shadow:var(--shadow-sm);padding:8px 0}
 .nav-container{display:flex;align-items:center;justify-content:space-between;height:80px}
 .logo{font-size:1.75rem;font-weight:700;color:var(--primary);letter-spacing:-.5px}
@@ -353,10 +353,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
    Para añadir un pack: sube la imagen a /catalogo/ y añade una línea aquí.
    ===================================================== */
 const PACKS=[
- {img:'catalogo/1.jpeg',title:'Pack Cachorros',desc:'Un buen inicio para una vida saludable',alt:'Pack Cachorros: vacunas, desparasitaciones, microchip y cartilla oficial'},
- {img:'catalogo/3.jpeg',title:'Pack Gatitos',desc:'Vacunas, tests de leucemia e inmunodeficiencia y microchip',alt:'Pack Gatitos: vacunas, test FeLV y FIV, desparasitaciones y microchip'},
- {img:'catalogo/4.jpeg',title:'Pack Leishmania',desc:'Test, vacuna y collar: protección hoy, más momentos mañana',alt:'Pack Leishmania: test, vacuna y collar preventivo'},
- {img:'catalogo/2.jpeg',title:'Pack Sénior',desc:'Problemas articulares: más movilidad, más calidad de vida',alt:'Pack Sénior para problemas articulares: control del dolor, Librela y condroprotectores'}
+ {img:'1.jpeg',title:'Pack Cachorros',desc:'Un buen inicio para una vida saludable',alt:'Pack Cachorros: vacunas, desparasitaciones, microchip y cartilla oficial'},
+ {img:'3.jpeg',title:'Pack Gatitos',desc:'Vacunas, tests de leucemia e inmunodeficiencia y microchip',alt:'Pack Gatitos: vacunas, test FeLV y FIV, desparasitaciones y microchip'},
+ {img:'4.jpeg',title:'Pack Leishmania',desc:'Test, vacuna y collar: protección hoy, más momentos mañana',alt:'Pack Leishmania: test, vacuna y collar preventivo'},
+ {img:'2.jpeg',title:'Pack Sénior',desc:'Problemas articulares: más movilidad, más calidad de vida',alt:'Pack Sénior para problemas articulares: control del dolor, Librela y condroprotectores'}
 ];
 (function(){
 const $=id=>document.getElementById(id);
