@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="google-site-verification" content="GVBIwmuqM4r7qm5HAtaD70mP8fythe_xDi9BGLj2Vt8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISVET | consultorio veterinario Cercano y Especializado en el Bages. Sant Vicenç de castellet</title>
+<meta name="description" content="consultorio veterinario VISVET. Medicina preventiva, cirugía, laboratorio y oftalmología veterinario avanzada en el Bages. Trato cercano y profesional.">
+<meta property="og:title" content="VISVET | consultorio veterinario">
+<meta property="og:description" content="consultorio veterinario cercana y de calidad. Especialistas en oftalmología y medicina general en el Bages.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0A3C67;--primary-dark:#072a48;--primary-light:#EBF3FA;--accent:#20948B;--text-main:#2C3E50;--text-muted:#64748B;--bg-light:#F8FAFC;--white:#FFFFFF;--border-color:#E2E8F0;--shadow-sm:0 4px 6px -1px rgba(10,60,103,.05),0 2px 4px -1px rgba(10,60,103,.03);--shadow-md:0 10px 15px -3px rgba(10,60,103,.08),0 4px 6px -2px rgba(10,60,103,.04);--shadow-lg:0 20px 25px -5px rgba(10,60,103,.1),0 10px 10px -5px rgba(10,60,103,.04);--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--transition:all .3s cubic-bezier(.4,0,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden}
+ul{list-style:none}a{text-decoration:none;color:inherit}img{max-width:100%;height:auto;display:block}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.top-banner{background:var(--accent);color:var(--white);text-align:center;padding:10px 16px;font-size:.875rem;font-weight:500;position:fixed;top:0;left:0;width:100%;z-index:1050;box-shadow:var(--shadow-sm)}
+.top-banner strong{font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.section-header{text-align:center;max-width:700px;margin:0 auto 64px}
+.section-subtitle{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px;display:block}
+.section-title{font-size:2.25rem;font-weight:700;color:var(--primary);line-height:1.2;margin-bottom:16px}
+.section-desc{font-size:1.1rem;color:var(--text-muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-size:1rem;font-weight:600;border-radius:var(--radius-sm);transition:var(--transition);cursor:pointer;border:2px solid transparent;gap:8px}
+.btn-primary{background:var(--primary);color:var(--white);box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+.btn-outline:hover{background:var(--primary-light);transform:translateY(-2px)}
+.btn-light{background:var(--white);color:var(--primary)}.btn-light:hover{background:var(--primary-light)}
+/* NAVBAR */
+.navbar{position:fixed;top:41px;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);transition:var(--transition)}
+.navbar.scrolled{box-shadow:var(--shadow-sm);padding:8px 0}
+.nav-container{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font-size:1.75rem;font-weight:700;color:var(--primary);letter-spacing:-.5px}
+.nav-menu{display:flex;align-items:center;gap:32px}
+.nav-link{font-weight:500;color:var(--text-main);transition:var(--transition);font-size:.95rem}.nav-link:hover{color:var(--primary)}
+.hamburger{display:none;cursor:pointer;background:none;border:none;width:30px;height:24px;position:relative}
+.hamburger span{display:block;position:absolute;height:2px;width:100%;background:var(--primary);border-radius:2px;transition:var(--transition)}
+.hamburger span:nth-child(1){top:0}.hamburger span:nth-child(2){top:11px}.hamburger span:nth-child(3){top:22px}
+.hamburger.active span:nth-child(1){transform:rotate(45deg);top:11px}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg);top:11px}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:140px;background:linear-gradient(135deg,var(--primary-light) 0%,var(--white) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:60px 0}
+.hero-content h1{font-size:3rem;font-weight:700;color:var(--primary);line-height:1.15;margin-bottom:24px}
+.hero-content p{font-size:1.15rem;color:var(--text-muted);margin-bottom:32px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.hero-image-wrapper{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.hero-image-wrapper img{width:100%;height:480px;object-fit:cover;transition:transform .6s ease}.hero-image-wrapper:hover img{transform:scale(1.03)}
+/* ABOUT */
+.about{padding:100px 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-image{position:relative;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md)}
+.about-image img{width:100%;height:420px;object-fit:cover}
+.about-text h2{font-size:2.25rem;color:var(--primary);font-weight:700;margin-bottom:24px;line-height:1.2}
+.about-text p{color:var(--text-muted);margin-bottom:16px;font-size:1.05rem}
+/* SERVICIOS */
+.services{padding:100px 0;background:var(--bg-light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:32px}
+.service-card{background:var(--white);padding:40px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid var(--border-color);position:relative;overflow:hidden}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:var(--primary-light)}
+.service-icon{width:60px;height:60px;background:var(--primary-light);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--primary)}
+.service-card h3{font-size:1.25rem;color:var(--primary);margin-bottom:12px;font-weight:600}
+.service-card p{color:var(--text-muted);font-size:.95rem}
+/* OFTALMOLOGÍA */
+.ophthalmology{padding:100px 0;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:var(--white)}
+.oph-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.oph-content h2{font-size:2.25rem;margin-bottom:24px;font-weight:700}
+.oph-content p{color:rgba(255,255,255,.85);margin-bottom:20px;font-size:1.05rem}
+.oph-list{margin-top:24px}.oph-list li{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-weight:500}
+.oph-list svg{color:var(--accent);flex-shrink:0}
+.oph-image{border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-lg)}.oph-image img{width:100%;height:400px;object-fit:cover}
+/* EQUIPO (fotos verticales) */
+.team{padding:100px 0;background:var(--white)}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;max-width:900px;margin:0 auto}
+.team-card{background:var(--bg-light);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-color);transition:var(--transition)}
+.team-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.team-img-wrapper{aspect-ratio:3/4;overflow:hidden}
+.team-img-wrapper img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s ease}
+.team-card:hover .team-img-wrapper img{transform:scale(1.05)}
+.team-info{padding:32px}.team-info h3{font-size:1.25rem;color:var(--primary);margin-bottom:4px;font-weight:600}
+.team-role{font-size:.875rem;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.team-info p{color:var(--text-muted);font-size:.95rem;line-height:1.5}
+/* FEATURES */
+.features{padding:100px 0;background:var(--bg-light)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
+.feature-item{background:var(--white);padding:32px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);text-align:center;border:1px solid var(--border-color)}
+.feature-icon-wrapper{width:70px;height:70px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--primary)}
+.feature-item h3{font-size:1.15rem;color:var(--primary);margin-bottom:10px;font-weight:600}
+.feature-item p{color:var(--text-muted);font-size:.9rem}
+/* GALERÍA */
+.gallery{padding:100px 0;background:var(--white)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gallery-item{position:relative;border-radius:var(--radius-md);overflow:hidden;height:280px;cursor:pointer;box-shadow:var(--shadow-sm);background:var(--bg-light)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery-overlay{position:absolute;inset:0;background:rgba(10,60,103,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease}
+.gallery-overlay svg{color:var(--white);width:36px;height:36px}
+.gallery-item:hover img{transform:scale(1.08)}.gallery-item:hover .gallery-overlay{opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.lightbox.active{opacity:1;pointer-events:auto}
+.lightbox img{max-width:90%;max-height:85vh;border-radius:var(--radius-sm);box-shadow:var(--shadow-lg)}
+.lightbox-close{position:absolute;top:30px;right:40px;background:none;border:none;color:var(--white);font-size:2.5rem;cursor:pointer;z-index:2010}
+ 
+/* =========================================
+   CATÁLOGO
+   ========================================= */
+.catalog{padding:110px 0;background:radial-gradient(circle at 12% 0%,var(--primary-light) 0%,transparent 45%),radial-gradient(circle at 92% 100%,#e3f4f2 0%,transparent 40%),var(--bg-light)}
+.catalog-promo{display:flex;justify-content:center;margin:-32px 0 56px}
+.catalog-promo span{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--primary);font-weight:600;font-size:.95rem;padding:10px 22px;border-radius:999px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm)}
+.catalog-promo b{background:var(--accent);color:var(--white);padding:2px 10px;border-radius:999px;font-size:.85rem}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:48px 32px;max-width:1120px;margin:0 auto}
+.pk-card{background:none;border:0;cursor:pointer;text-align:center;font-family:inherit;color:inherit;display:flex;flex-direction:column;align-items:center}
+.pk-poster{position:relative;display:block;width:100%;aspect-ratio:2/3;border-radius:var(--radius-md);overflow:hidden;background:var(--white);border:1px solid var(--border-color);box-shadow:var(--shadow-md);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.pk-poster img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s ease}
+.pk-card:hover .pk-poster,.pk-card:focus-visible .pk-poster{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+.pk-card:hover .pk-poster img{transform:scale(1.04)}
+.pk-card:focus-visible{outline:3px solid var(--accent);outline-offset:6px;border-radius:var(--radius-md)}
+.pk-badge{position:absolute;top:14px;right:14px;background:var(--accent);color:var(--white);font-weight:700;font-size:.85rem;padding:5px 12px;border-radius:999px;box-shadow:var(--shadow-sm)}
+.pk-card h3{margin-top:22px;font-size:1.2rem;color:var(--primary);font-weight:700}
+.pk-card p{font-size:.9rem;color:var(--text-muted);margin-top:4px;max-width:260px}
+.catalog-tag{display:inline-flex;margin-top:14px;font-size:.82rem;font-weight:600;color:var(--accent);padding:7px 16px;border:1px solid currentColor;border-radius:999px;transition:var(--transition)}
+.pk-card:hover .catalog-tag{background:var(--accent);color:var(--white);border-color:var(--accent)}
+/* Visor */
+.pk{position:fixed;inset:0;z-index:2100;background:rgba(5,28,48,.94);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.pk.active{opacity:1;pointer-events:auto}
+.pk-top{color:#fff;text-align:center}.pk-top b{display:block;font-size:1.15rem}.pk-top small{opacity:.6;font-size:.8rem}
+.pk-close{position:absolute;top:14px;right:22px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.7rem;cursor:pointer;line-height:1;transition:var(--transition)}
+.pk-close:hover{background:rgba(255,255,255,.25)}
+.pk-frame{max-height:calc(100vh - 230px);overflow:auto;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.5);background:#fff;max-width:94vw}
+.pk-img{display:block;height:calc(100vh - 230px);width:auto;max-width:94vw;object-fit:contain;cursor:zoom-in;animation:pkIn .35s ease}
+.pk-frame.zoom .pk-img{height:auto;width:min(1024px,94vw);max-width:none;cursor:zoom-out}
+@keyframes pkIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:none}}
+.pk-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);width:50px;height:50px;border-radius:50%;font-size:1.5rem;cursor:pointer;transition:var(--transition)}
+.pk-arrow:hover{background:var(--accent);border-color:var(--accent)}.pk-prev{left:24px}.pk-next{right:24px}
+.pk-bottom{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;padding:0 16px}
+.pk-thumbs{display:flex;gap:10px}
+.pk-th{width:44px;height:60px;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;opacity:.55;background:#fff;transition:var(--transition)}
+.pk-th img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pk-th.on,.pk-th:hover{opacity:1;border-color:var(--accent)}
+.pk-call{padding:10px 20px;font-size:.9rem}
+/* CTA, CONTACTO, FOOTER */
+.cta-section{padding:80px 0;background:var(--primary);color:var(--white);text-align:center;position:relative;overflow:hidden}
+.cta-container{max-width:800px;margin:0 auto;position:relative;z-index:2}
+.cta-section h2{font-size:2.5rem;font-weight:700;margin-bottom:16px}
+.cta-section p{font-size:1.15rem;color:rgba(255,255,255,.85);margin-bottom:32px}
+.contact{padding:100px 0;background:var(--bg-light)}
+.contact-container-single{max-width:800px;margin:0 auto}
+.contact-info-box{background:var(--white);padding:56px;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);border:1px solid var(--border-color);display:flex;flex-direction:column;gap:32px}
+.contact-info-box h3{font-size:2rem;color:var(--primary);margin-bottom:8px;text-align:center}
+.contact-info-subtitle{text-align:center;color:var(--text-muted);margin-bottom:16px;font-size:1.05rem}
+.contact-grid-details{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:768px){.contact-grid-details{grid-template-columns:1fr}}
+.contact-detail{display:flex;gap:16px;align-items:flex-start}
+.contact-detail svg{color:var(--accent);flex-shrink:0;margin-top:4px;width:28px;height:28px}
+.contact-detail h4{font-size:1.05rem;color:var(--primary);margin-bottom:4px;font-weight:600}
+.contact-detail p,.contact-detail a{color:var(--text-muted);font-size:.95rem;transition:var(--transition);line-height:1.5}
+.contact-detail a:hover{color:var(--primary)}
+.contact-action-box{text-align:center;background:var(--primary-light);padding:32px;border-radius:var(--radius-md);border:1px dashed var(--accent)}
+.contact-action-box h4{color:var(--primary);font-size:1.25rem;margin-bottom:12px}
+.contact-action-box p{color:var(--text-muted);margin-bottom:20px}
+.footer{background:var(--primary-dark);color:var(--white);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-col h4{font-size:1.2rem;margin-bottom:20px;font-weight:600}
+.footer-col p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.6;margin-bottom:20px}
+.footer-links{display:flex;flex-direction:column;gap:12px}
+.footer-links a{color:rgba(255,255,255,.7);font-size:.95rem;transition:var(--transition)}.footer-links a:hover{color:var(--white);padding-left:4px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:.875rem;color:rgba(255,255,255,.6);flex-wrap:wrap;gap:16px}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+@media(max-width:968px){
+.hero-grid,.about-grid,.oph-grid,.footer-grid{grid-template-columns:1fr;gap:40px}
+.hero-content h1{font-size:2.5rem}.gallery-grid{grid-template-columns:repeat(2,1fr)}
+.nav-menu{position:fixed;top:121px;left:-100%;width:100%;height:calc(100vh - 121px);background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:left .4s ease;box-shadow:var(--shadow-md)}
+.nav-menu.active{left:0}.hamburger{display:block}.hero{text-align:center}.hero-buttons{justify-content:center}}
+@media(max-width:576px){
+.hero-content h1{font-size:2rem}.section-title{font-size:1.85rem}
+.services-grid,.team-grid,.gallery-grid{grid-template-columns:1fr}
+.contact-info-box{padding:24px}.top-banner{font-size:.8rem;padding:8px 12px}
+.navbar{top:37px}.nav-menu{top:117px;height:calc(100vh - 117px)}
+.pk-arrow{width:40px;height:40px;top:auto;bottom:22px;transform:none}.pk-prev{left:12px}.pk-next{right:12px}.pk-frame{height:auto;max-height:calc(100vh - 250px)}.pk-img{height:calc(100vh - 250px)}.pk-th{width:36px;height:50px}.catalog-promo{margin-top:-40px}}
+</style>
+</head>
+<body>
+ 
+<!-- Iconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></symbol>
+<symbol id="i-zoom" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></symbol>
+</svg>
+ 
+<div class="top-banner"><strong>Web en proceso de creación:</strong> estamos terminando de perfeccionar los últimos detalles, disculpen las molestias.</div>
+ 
+<header class="navbar" id="navbar">
+<div class="container nav-container">
+<a href="#inicio" class="logo">VISVET</a>
+<nav><ul class="nav-menu" id="navMenu">
+<li><a href="#inicio" class="nav-link">Inicio</a></li>
+<li><a href="#consultorioo" class="nav-link">El consultorio</a></li>
+<li><a href="#servicios" class="nav-link">Servicios</a></li>
+<li><a href="#oftalmologia" class="nav-link">Oftalmología</a></li>
+<li><a href="#equipo" class="nav-link">Equipo</a></li>
+<li><a href="#galeria" class="nav-link">Galería</a></li>
+<li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+<li><a href="#contacto" class="nav-link">Contacto</a></li>
+<li><a href="tel:623797120" class="btn btn-primary" style="padding:10px 20px;font-size:.9rem"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg>Llamar</a></li>
+</ul></nav>
+<button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+</header>
+ 
+<main>
+<section class="hero" id="inicio"><div class="container"><div class="hero-grid">
+<div class="hero-content animate-on-scroll">
+<h1>Consultorio cercano, medicina de calidad.</h1>
+<p>Cuidamos de tu animal con la cercanía de un consultorio veterinario de pueblo y los medios de un centro veterinarioo moderno.</p>
+<div class="hero-buttons">
+<a href="tel:623797120" class="btn btn-primary"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg>Llamar para Cita</a>
+<a href="#consultorio" class="btn btn-outline">Conócenos</a>
+</div></div>
+<div class="hero-image-wrapper animate-on-scroll"><img src="foto1.jpeg" alt="consultorio veterinario VISVET - Cuidado animal profesional"></div>
+</div></div></section>
+ 
+<section class="about" id="consultorio"><div class="container"><div class="about-grid">
+<div class="about-image animate-on-scroll"><img src="foto2.jpeg" alt="Instalaciones del consultorio veterinario VISVET"></div>
+<div class="about-text animate-on-scroll">
+<span class="section-subtitle">Quiénes somos</span>
+<h2>Una clinica de pueblo, con mentalidad de futuro</h2>
+<p>Todo empezó un día, tomando algo entre amigos. Cansados de cómo estaba planteado el sistema y con muchas ganas de hacer las cosas de otra manera, decidimos dar un paso adelante y emprender nuestro propio proyecto: crear un <strong>consultorio veterinario</strong> en el que pudiéramos trabajar siguiendo nuestra propia manera de entender la profesión. Así nació <strong>VISVET</strong>.</p>
+<p>Somos un consultorio veterinario cercano, de pueblo y pensado para nuestros vecinos y sus animales. Pero ser un centro de proximidad no significa renunciar a la calidad. Nuestro objetivo es ofrecer una medicina veterinarioa basada en la buena práctica, la formación continua y la utilización de tecnología y equipamiento de calidad.</p>
+</div></div></div></section>
+ 
+<section class="services" id="servicios"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Qué hacemos</span><h2 class="section-title">Nuestros Servicios</h2><p class="section-desc">Servicios completos y diagnósticos precisos adaptados a cada paciente.</p></div>
+<div class="services-grid">
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h3>Consulta veterinarioa</h3><p>Realizamos revisiones generales, valoración de síntomas, seguimiento de enfermedades y controles de salud, adaptando cada visita a la edad, especie y situación de cada animal.</p></div>
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><h3>Medicina preventiva</h3><p>Controles periódicos, vacunaciones, desparasitaciones y revisiones adaptadas. Asesoramos sobre alimentación, higiene y comportamiento para mantener una buena calidad de vida.</p></div>
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-flask"/></svg></div><h3>Laboratorio y analíticas</h3><p>Disponemos de laboratorio propio con equipos de análisis para obtener información rápida y precisa para diagnóstico, seguimiento y controles prequirúrgicos.</p></div>
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg></div><h3>Radiografía digital</h3><p>Contamos con equipamiento de radiografía digital avanzado para obtener imágenes de alta calidad que ayudan en el diagnóstico preciso de diferentes patologías.</p></div>
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div><h3>Ecografía</h3><p>Nos permite valorar diferentes órganos y estructuras internas de forma no invasiva, obteniendo información complementaria vital a la exploración física.</p></div>
+<div class="service-card animate-on-scroll"><div class="service-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div><h3>Cirugía</h3><p>Quirófano completamente equipado para realizar diferentes procedimientos quirúrgicos, con valoración previa y estrictos protocolos de anestesia y monitorización.</p></div>
+</div></div></section>
+ 
+<section class="ophthalmology" id="oftalmologia"><div class="container"><div class="oph-grid">
+<div class="oph-content animate-on-scroll">
+<span class="section-subtitle" style="color:var(--accent)">Especialidad destacada</span>
+<h2>Oftalmología veterinarioa en el Bages</h2>
+<p>La oftalmología veterinarioa es una de las áreas en las que VISVET quiere hacer una apuesta especial. Roser Obach Farré cuenta con un Máster en Oftalmología veterinarioa y un internado de seis meses en IVO Barcelona.</p>
+<p>Actualmente realizamos diagnóstico con lámpara de hendidura, tonometría y tests de exploración ocular, así como cirugía de los anejos oculares.</p>
+<ul class="oph-list">
+<li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-check"/></svg>Lámpara de hendidura y tonometría</li>
+<li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-check"/></svg>Exploración oftalmológica avanzada</li>
+<li><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-check"/></svg>Próxima incorporación de Electrorretinografía (ERG)</li>
+</ul></div>
+<div class="oph-image animate-on-scroll"><img src="foto3.jpeg" alt="Servicio de oftalmología veterinarioa VISVET"></div>
+</div></div></section>
+ 
+<section class="team" id="equipo"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Profesionales vocacionales</span><h2 class="section-title">Nuestro Equipo</h2><p class="section-desc">Experiencia, formación continua y pasión por el bienestar animal.</p></div>
+<div class="team-grid">
+<div class="team-card animate-on-scroll"><div class="team-img-wrapper"><img src="R.jpeg" alt="Roser Obach Farré - veterinarioa fundadora de VISVET"></div><div class="team-info"><h3>Roser Obach Farré</h3><span class="team-role">veterinarioa y fundadora</span><p>Licenciada por la Universidad CEU Cardenal Herrera. Cuenta con un Máster en Cirugía veterinarioa, un Máster en Oftalmología veterinarioa (internado en IVO Barcelona) y un Máster en Medicina Interna.</p></div></div>
+<div class="team-card animate-on-scroll"><div class="team-img-wrapper"><img src="A.jpeg" alt="Albert Bohigas Vilarmau - ATV y cofundador de VISVET"></div><div class="team-info"><h3>Albert Bohigas Vilarmau</h3><span class="team-role">ATV, Técnico de Quirófano y Cofundador</span><p>Formado en CIM Formación. Con una sólida trayectoria en centros de referencia como el Hospital veterinario Provença y el consultorio veterinario Sant Fruitós. Encargado de quirófano, análisis y atención.</p></div></div>
+</div></div></section>
+ 
+<section class="features"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Nuestra filosofía</span><h2 class="section-title">Lo que nos hace diferentes</h2><p class="section-desc">Hacer las cosas bien y mantener la cercanía con cada familia.</p></div>
+<div class="features-grid">
+<div class="feature-item animate-on-scroll"><div class="feature-icon-wrapper"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-clock"/></svg></div><h3>Trato Cercano</h3><p>Un consultorio de pueblo pensado para nuestros vecinos, humano y accesible.</p></div>
+<div class="feature-item animate-on-scroll"><div class="feature-icon-wrapper"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3>Formación Continua</h3><p>Constante aprendizaje y especialización para ofrecer medicina basada en buena praxis.</p></div>
+<div class="feature-item animate-on-scroll"><div class="feature-icon-wrapper"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-flask"/></svg></div><h3>Tecnología Moderna</h3><p>Equipamiento de calidad para diagnósticos precisos y completos.</p></div>
+</div></div></section>
+ 
+<section class="gallery" id="galeria"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Instalaciones</span><h2 class="section-title">Galería Fotográfica</h2><p class="section-desc">Un vistazo a nuestras instalaciones, equipamiento médico y pacientes.</p></div>
+<div class="gallery-grid" id="galleryGrid"></div>
+</div></section>
+ 
+<!-- ================= CATÁLOGO ================= -->
+<section class="catalog" id="catalogo"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Programas de prevención</span><h2 class="section-title">Catálogo</h2><p class="section-desc">Packs de salud pensados para cada etapa de la vida de tu animal. Pulsa sobre uno para verlo en grande.</p></div>
+<div class="catalog-promo animate-on-scroll"><span><b>-20%</b> de descuento en todos los packs hasta final de año</span></div>
+<div class="catalog-grid" id="catalogGrid"></div>
+</div></section>
+ 
+<section class="cta-section"><div class="container cta-container animate-on-scroll">
+<h2>¿Necesitas programar una visita para tu animal?</h2>
+<p>Ponte en contacto con nosotros directamente por teléfono. Estaremos encantados de atenderte.</p>
+<a href="tel:623797120" class="btn btn-light" style="font-weight:600"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg>Llamar ahora: 623 79 71 20</a>
+</div></section>
+ 
+<section class="contact" id="contacto"><div class="container">
+<div class="section-header animate-on-scroll"><span class="section-subtitle">Estamos aquí</span><h2 class="section-title">Contacto y Ubicación</h2><p class="section-desc">Ponte en contacto con nosotros por teléfono para cualquier consulta o cita previa.</p></div>
+<div class="contact-container-single animate-on-scroll"><div class="contact-info-box">
+<div><h3>consultorio veterinario VISVET</h3><p class="contact-info-subtitle">Atención profesional y cercana en el Bages</p></div>
+<div class="contact-grid-details">
+<div class="contact-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><div><h4>Dirección</h4><p>Av. Del secretari<br>Sant Vicenç de Castellet<br>08295</p></div></div>
+<div class="contact-detail"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg><div><h4>Teléfono</h4><p><a href="tel:623797120"><strong>623 79 71 20</strong></a></p></div></div>
+<div class="contact-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><div><h4>Correo Electrónico</h4><p><a href="mailto:clinicaveterinariavisvet@gmail.com">clinicaveterinariavisvet@gmail.com</a></p></div></div>
+<div class="contact-detail"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-clock"/></svg><div><h4>Horarios de Atención</h4><p><strong>DLL-Dv:</strong> 10:00 - 19:00<br><strong>Dm-Dj:</strong> 9:30 - 13:00 | 16:00 - 20:00<br><strong>Diss:</strong> 10:00 - 14:00</p></div></div>
+</div>
+<div class="contact-action-box"><h4>¿Deseas pedir cita o resolver una urgencia?</h4><p>El sistema de contacto directo es por llamada telefónica para una atención rápida y personalizada.</p>
+<a href="tel:623797120" class="btn btn-primary" style="font-size:1.1rem;padding:16px 36px"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg>Llamar Ahora: 623 79 71 20</a></div>
+</div></div></div></section>
+</main>
+ 
+<footer class="footer"><div class="container">
+<div class="footer-grid">
+<div class="footer-col"><h4 style="font-size:1.5rem;letter-spacing:-.5px">VISVET</h4><p>consultorio veterinario cercano y de calidad en el Bages. Combinamos el trato humano de proximidad con equipamiento médico y quirúrgico moderno.</p></div>
+<div class="footer-col"><h4>Enlaces rápidos</h4><div class="footer-links"><a href="#inicio">Inicio</a><a href="#consultorio">El consultorio</a><a href="#servicios">Servicios</a><a href="#oftalmologia">Oftalmología</a><a href="#equipo">Equipo</a><a href="#galeria">Galería</a><a href="#catalogo">Catálogo</a></div></div>
+<div class="footer-col"><h4>Contacto</h4><div class="footer-links"><a href="tel:623797120">623 79 71 20</a><a href="mailto:clinicaveterinariavisvet@gmail.com">clinicaveterinariavisvet@gmail.com</a><p style="font-size:.9rem;margin-top:8px">Av. Del secretari, Sant Vicenç de Castellet</p></div></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 VISVET. Todos los derechos reservados.</p><div style="display:flex;gap:16px"><a href="#" style="color:inherit">Aviso legal</a><a href="#" style="color:inherit">Política de privacidad</a></div></div>
+</div></footer>
+ 
+<!-- LIGHTBOX GALERÍA -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button class="lightbox-close" onclick="closeLightbox()">&times;</button><img id="lightboxImg" src="" alt="Ampliada"></div>
+ 
+<!-- VISOR DE PACKS -->
+<div class="pk" id="pk" role="dialog" aria-modal="true" aria-label="Visor de catálogo">
+<button class="pk-close" id="pkClose" aria-label="Cerrar">&times;</button>
+<button class="pk-arrow pk-prev" id="pkPrev" aria-label="Anterior">&#8592;</button>
+<button class="pk-arrow pk-next" id="pkNext" aria-label="Siguiente">&#8594;</button>
+<div class="pk-top"><b id="pkTitle"></b><small id="pkCount"></small></div>
+<div class="pk-frame" id="pkFrame"><img class="pk-img" id="pkImg" src="" alt=""></div>
+<div class="pk-bottom"><div class="pk-thumbs" id="pkThumbs"></div>
+<a href="tel:623797120" class="btn btn-primary pk-call"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-phone"/></svg>Pedir cita: 623 79 71 20</a></div>
+</div>
+ 
+<script>
+/* Menú móvil */
+const hamburger=document.getElementById('hamburger'),navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navMenu.classList.toggle('active')});
+document.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>{hamburger.classList.remove('active');navMenu.classList.remove('active')}));
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>30));
+ 
+/* Galería (9 fotos) + lightbox */
+const GALLERY=[['foto1','consultorio veterinario VISVET 1'],['foto2','Instalaciones VISVET 2'],['foto3','Equipamiento médico VISVET 3'],['foto4','Área clínica VISVET 4'],['foto5','Sala de espera VISVET 5'],['foto1','Atención personalizada VISVET 6'],['foto2','Quirófano VISVET 7'],['foto3','Laboratorio VISVET 8'],['foto4','Pacientes VISVET 9']];
+document.getElementById('galleryGrid').innerHTML=GALLERY.map(([f,a])=>`<div class="gallery-item animate-on-scroll" onclick="openLightbox('${f}.jpeg')"><img src="${f}.jpeg" alt="${a}"><div class="gallery-overlay"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-zoom"/></svg></div></div>`).join('');
+const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightboxImg');
+function openLightbox(s){lightboxImg.src=s;lightbox.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){lightbox.classList.remove('active');document.body.style.overflow='auto'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+ 
+/* =====================================================
+   CATÁLOGO · PACKS
+   Para añadir un pack: sube la imagen a /catalogo/ y añade una línea aquí.
+   ===================================================== */
+const PACKS=[
+ {img:'catalogo/1.jpeg',title:'Pack Cachorros',desc:'Un buen inicio para una vida saludable',alt:'Pack Cachorros: vacunas, desparasitaciones, microchip y cartilla oficial'},
+ {img:'catalogo/3.jpeg',title:'Pack Gatitos',desc:'Vacunas, tests de leucemia e inmunodeficiencia y microchip',alt:'Pack Gatitos: vacunas, test FeLV y FIV, desparasitaciones y microchip'},
+ {img:'catalogo/4.jpeg',title:'Pack Leishmania',desc:'Test, vacuna y collar: protección hoy, más momentos mañana',alt:'Pack Leishmania: test, vacuna y collar preventivo'},
+ {img:'catalogo/2.jpeg',title:'Pack Sénior',desc:'Problemas articulares: más movilidad, más calidad de vida',alt:'Pack Sénior para problemas articulares: control del dolor, Librela y condroprotectores'}
+];
+(function(){
+const $=id=>document.getElementById(id);
+const grid=$('catalogGrid'),pk=$('pk'),img=$('pkImg'),frame=$('pkFrame'),thumbs=$('pkThumbs');
+let cur=0,lastFocus=null;
+PACKS.forEach((p,i)=>{
+ const b=document.createElement('button');b.className='pk-card';b.setAttribute('aria-label','Ver '+p.title);
+ b.innerHTML=`<span class="pk-poster"><img src="${p.img}" alt="${p.alt}" loading="lazy"><span class="pk-badge">-20%</span></span><h3>${p.title}</h3><p>${p.desc}</p><span class="catalog-tag">Ver pack &rarr;</span>`;
+ b.onclick=()=>open(i);grid.appendChild(b);
+ const t=document.createElement('button');t.className='pk-th';t.setAttribute('aria-label',p.title);
+ t.innerHTML=`<img src="${p.img}" alt="">`;t.onclick=()=>show(i);thumbs.appendChild(t);
+});
+function show(i){
+ cur=(i+PACKS.length)%PACKS.length;const p=PACKS[cur];
+ frame.classList.remove('zoom');frame.scrollTop=0;
+ img.style.animation='none';void img.offsetWidth;img.style.animation='';
+ img.src=p.img;img.alt=p.alt;
+ $('pkTitle').textContent=p.title;$('pkCount').textContent=(cur+1)+' / '+PACKS.length+' · Pulsa la imagen para ampliar';
+ [...thumbs.children].forEach((t,k)=>t.classList.toggle('on',k===cur));
+}
+function open(i){lastFocus=document.activeElement;show(i);pk.classList.add('active');document.body.style.overflow='hidden';$('pkClose').focus()}
+function close(){pk.classList.remove('active');document.body.style.overflow='auto';if(lastFocus)lastFocus.focus()}
+$('pkPrev').onclick=()=>show(cur-1);$('pkNext').onclick=()=>show(cur+1);$('pkClose').onclick=close;
+pk.addEventListener('click',e=>{if(e.target===pk)close()});
+img.onclick=()=>frame.classList.toggle('zoom');
+let tx=null;
+pk.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+pk.addEventListener('touchend',e=>{if(tx===null||frame.classList.contains('zoom'))return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1))});
+document.addEventListener('keydown',e=>{if(!pk.classList.contains('active'))return;
+ if(e.key==='ArrowRight')show(cur+1);else if(e.key==='ArrowLeft')show(cur-1);else if(e.key==='Escape')close()});
+})();
+ 
+/* Animaciones al hacer scroll (después de generar galería y catálogo) */
+const observer=new IntersectionObserver((entries,o)=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
